@@ -17,3 +17,5 @@ app.get('/', function(req, res) {
 //listen on port
 var port = process.env.PORT || 8000;
 app.listen(port);
+
+console.log("Working...");
