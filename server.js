@@ -1,7 +1,7 @@
 //test
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 //setting view engine to ejs
 app.set('view engine', 'ejs');
@@ -10,12 +10,12 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 //routes
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   res.render('pad');
 });
 
 //listen on port
-var port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 app.listen(port);
 
 console.log("Working...");
