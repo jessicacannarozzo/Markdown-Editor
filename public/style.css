@@ -1,7 +1,7 @@
-#pad {
+.scratch-pad {
   overflow: auto
 }
 
-#markdown {
+.markdown-output {
   overflow: auto
 }
