@@ -49,6 +49,11 @@ app.post('/', upload.array(), (req, res) => {
   });
 });
 
+app.get('/stars', (req, res) => {
+  console.log('OOooooOOOOoooo Spooky Stars');
+  res.render('stars');
+});
+
 // catch all other requests and deny them
 app.all('*', (req, res) => {
   console.log('Accessing the secret section ...');
