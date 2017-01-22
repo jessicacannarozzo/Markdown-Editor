@@ -1,7 +1,15 @@
-.scratch-pad {
-  overflow: auto
+
+#pad {
+  overflow: auto;
+  height: 100%;
+  width: 50%;
+  resize: none;
 }
 
-.markdown-output {
-  overflow: auto
+#markdown {
+  overflow: auto;
+}
+
+.full-height {
+  height: 100%;
 }
