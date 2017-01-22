@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/jessicacannarozzo/Markdown-Editor.git%22#readme",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "ejs": "^2.5.5",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "multer": "^1.2.1"
   }
 }
