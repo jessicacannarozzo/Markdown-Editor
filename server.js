@@ -18,4 +18,4 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || 8000;
 app.listen(port);
 
-console.log("Working...");
+console.log("Server listening on port: " + port);

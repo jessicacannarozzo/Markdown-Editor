@@ -1,15 +1,33 @@
+body {
+    margin: 0;
+    background-color: #D4D4D4;
+}
+
+textarea:focus {
+  outline: none;
+}
 
 #pad {
+  margin: 0;
+  padding: 0;
   overflow: auto;
-  height: 100%;
-  width: 50%;
+  width: 100%;
+  height: 90vh;
   resize: none;
+  border: none;
 }
 
 #markdown {
   overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 
-.full-height {
-  height: 100%;
+.wordpad {
+  padding: 1rem;
+}
+
+.panel {
+  box-shadow: 7px 7px 3px #888888;
+  height: 95vh;
 }
