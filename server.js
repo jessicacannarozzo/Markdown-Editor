@@ -43,10 +43,16 @@ app.post('/', upload.array(), (req, res) => {
     note: req.body.note,
     title: req.body.title
   };
-  console.log(req.body);
+  console.log(data);
   res.render('pad', {
     data: data
   });
+});
+
+//delete note (just clears form and console logs for now)
+app.post('/delete', (req, res) => {
+  console.log('Deleted note!');
+  res.redirect('/');
 });
 
 // catch all other requests and deny them

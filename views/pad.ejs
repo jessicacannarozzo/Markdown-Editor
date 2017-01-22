@@ -3,6 +3,7 @@
 
   <head>
      <title> <%= data.title %> </title>
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
      <link href="style.css" rel="stylesheet">
@@ -12,17 +13,24 @@
     <section class="row">
         <div class="col-md-6 col-sm-6 col-xs-6 wordpad">
 
-            <form method="post" action="/">
+            <form id="saveForm" method="post" action="/">
               <div class="panel panel-body" style="height: 10vh;">
                 <input type="text" name="title" value="<%= data.title %>" style="font-size: 24px; font-weight: 800; border: none;"/>
               </div>
-              <div class="panel panel-body" style="height: 75vh;">
+              <div class="panel panel-body" style="height: 73vh;">
                 <textarea name="note" id="pad" placeholder="Write your text here.." onkeyup="renderNote()"><%= data.note %></textarea>
               </div>
-              <button type="submit" class="btn btn-success btn-block" style="box-shadow: 3px 5px 7px #888888;">Save</button>
             </form>
-
-
+            <form id="deleteForm" method="post" action="/delete">
+            </form>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <button onclick="saveNote()" class="btn btn-success btn-block" style="box-shadow: 3px 5px 7px #888888;">Save</button>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <button onclick="deleteNote()" class="btn btn-block btn-danger" style="box-shadow: 3px 5px 7px #888888;">Delete</button>
+              </div>
+            </div>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6 wordpad">
           <div class="panel panel-body">
@@ -33,6 +41,15 @@
 
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.0.2/dist/showdown.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      function saveNote() {
+        document.getElementById('saveForm').submit();
+      };
+
+      function deleteNote() {
+        document.getElementById('deleteForm').submit();
+      };
+    </script>
   </body>
 
 </html>
