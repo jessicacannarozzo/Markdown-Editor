@@ -49,10 +49,17 @@ app.post('/', upload.array(), (req, res) => {
   });
 });
 
+
 //delete note (just clears form and console logs for now)
 app.post('/delete', (req, res) => {
   console.log('Deleted note!');
   res.redirect('/');
+});
+
+// Spooky Stars
+app.get('/stars', (req, res) => {
+  console.log('OOooooOOOOoooo Spooky Stars');
+  res.render('stars');
 });
 
 // catch all other requests and deny them
